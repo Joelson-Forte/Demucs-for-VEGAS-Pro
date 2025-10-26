@@ -14,10 +14,11 @@
             box-sizing: border-box;
         }
 
+        /* Dark theme base */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #121212; /* dark background */
+            color: #e6e6e6; /* light text */
             line-height: 1.6;
         }
 
@@ -29,8 +30,8 @@
 
         /* Hero Section */
         #hero {
-            background-color: #007BFF;
-            color: white;
+            background-color: #000; /* dark hero */
+            color: #fff;
             padding: 40px 0;
             text-align: center;
         }
@@ -42,22 +43,25 @@
 
         #hero p {
             font-size: 1.2rem;
+            color: #cfcfcf;
         }
 
         .btn-primary {
-            background-color: #fff;
-            color: #007BFF;
+            background-color: #1e90ff;
+            color: #fff;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             display: inline-block;
             margin-top: 20px;
+            transition: background 0.25s ease;
+            border: 1px solid rgba(255,255,255,0.06);
         }
 
         .btn-primary:hover {
-            background-color: #0056b3;
-            color: white;
+            background-color: #0b60d1;
+            color: #fff;
         }
 
         /* Demo */
@@ -65,6 +69,12 @@
             text-align: center;
             margin-top: 40px;
             padding: 50px 0;
+            background-color: #1e1e1e;
+        }
+
+        #demo h2 {
+            color: #fff;
+            margin-bottom: 30px;
         }
 
         #demo iframe {
@@ -73,6 +83,9 @@
             height: 450px;
             margin: 0 auto;
             display: block;
+            border-radius: 8px;
+            border: 2px solid #2a2a2a;
+            background: #000;
         }
 
         @media (max-width: 768px) {
@@ -81,26 +94,9 @@
             }
         }
 
-        /* Features (kept for structure) */
-        #features {
-            background-color: #f9f9f9;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        #features ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #features li {
-            font-size: 1.1rem;
-            margin: 10px 0;
-        }
-
         /* Demucs Stems Separation (Features) */
         #demucs-stems {
-            background-color: #ffffff;
+            background-color: #161616;
             padding: 50px 0;
             text-align: left;
         }
@@ -112,16 +108,21 @@
         #demucs-stems h2 {
             text-align: center;
             margin-bottom: 40px;
+            color: #ffffff;
         }
 
         #demucs-stems h3 {
-            color: #007BFF;
+            color: #1e90ff;
             margin-bottom: 10px;
         }
 
         #demucs-stems h4 {
             margin-top: 20px;
-            color: #333;
+            color: #cfcfcf;
+        }
+
+        #demucs-stems p {
+            color: #dcdcdc;
         }
 
         #demucs-stems ul {
@@ -133,12 +134,24 @@
         #demucs-stems li {
             margin-bottom: 10px;
             font-size: 1rem;
+            color: #d0d0d0;
+        }
+
+        #demucs-stems hr {
+            border: 0;
+            border-top: 1px solid #2a2a2a;
+            margin: 30px 0;
         }
 
         /* Pricing */
         #pricing {
             padding: 50px 0;
             text-align: center;
+            background-color: #181818;
+        }
+
+        #pricing h2 {
+            color: #fff;
         }
 
         .pricing-cards {
@@ -149,43 +162,75 @@
         }
 
         .pricing-cards .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: #202020;
+            border: 1px solid #2b2b2b;
             padding: 20px;
             border-radius: 10px;
             width: 300px;
             text-align: center;
+            color: #e6e6e6;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.5);
         }
 
         .pricing-cards .card h3 {
             margin-bottom: 15px;
+            color: #1e90ff;
+        }
+
+        .pricing-cards .card p {
+            color: #d6d6d6;
         }
 
         /* Contact Form */
         #contact {
-            background-color: #ffffff;
+            background-color: #161616;
             padding: 50px 0;
             text-align: center;
+        }
+
+        #contact h2 {
+            color: #fff;
+            margin-bottom: 20px;
         }
 
         #contact form input,
         #contact form textarea {
             width: 100%;
             max-width: 500px;
+            background-color: #1f1f1f;
+            color: #e6e6e6;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #333;
             border-radius: 4px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #contact form input:focus,
+        #contact form textarea:focus {
+            border-color: #1e90ff;
+            box-shadow: 0 0 0 3px rgba(30,144,255,0.08);
         }
 
         #contact form button {
             margin-top: 10px;
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #contact form button:hover {
+            background-color: #0b60d1;
         }
 
         /* Footer */
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #000;
+            color: #9a9a9a;
             padding: 20px 0;
             text-align: center;
         }
@@ -202,6 +247,10 @@
         .btn-secondary:hover {
             background-color: #218838;
         }
+
+        /* Small utility */
+        a { color: #8cc3ff; }
+        hr { border: 0; border-top: 1px solid #2a2a2a; }
     </style>
 </head>
 <body>
@@ -236,9 +285,9 @@
                 <p>Demucs for VEGAS Pro is built for efficiency, utilizing hardware acceleration for maximum speed and operating entirely offline for privacy and reliability.</p>
                 <h4>Performance Highlights:</h4>
                 <ul>
-                    <li>⚡ **GPU Acceleration**: Fully compatible with **NVIDIA CUDA GPUs** for lightning-fast processing.</li>
-                    <li>💻 **CPU Support**: Works reliably even on systems without a dedicated NVIDIA GPU.</li>
-                    <li>🌐 **100% Offline**: **No internet connection required** after installation. Your projects remain private.</li>
+                    <li>⚡ <strong>GPU Acceleration</strong>: Fully compatible with <strong>NVIDIA CUDA GPUs</strong> for lightning-fast processing.</li>
+                    <li>💻 <strong>CPU Support</strong>: Works reliably even on systems without a dedicated NVIDIA GPU.</li>
+                    <li>🌐 <strong>100% Offline</strong>: <strong>No internet connection required</strong> after installation. Your projects remain private.</li>
                 </ul>
             </div>
             
@@ -247,21 +296,21 @@
                 <p>Choose the optimal balance between speed and quality, and precisely control which audio parts are extracted for your editing needs.</p>
                 <h4>Processing Modes:</h4>
                 <ul>
-                    <li>1. **Best Quality**: Highest fidelity audio separation (Recommended for final output).</li>
-                    <li>2. **Fast Render**: Quick processing for rapid previews and workflow integration.</li>
-                    <li>3. **6 Stems Mode**: Enables extraction of up to 6 distinct audio components.</li>
+                    <li>1. <strong>Best Quality</strong>: Highest fidelity audio separation (Recommended for final output).</li>
+                    <li>2. <strong>Fast Render</strong>: Quick processing for rapid previews and workflow integration.</li>
+                    <li>3. <strong>6 Stems Mode</strong>: Enables extraction of up to 6 distinct audio components.</li>
                 </ul>
                 <h4>Available Stems for Extraction:</h4>
                 <ul>
-                    <li>🎤 **Vocals**: Main singing or speaking voice.</li>
-                    <li>🥁 **Drums**: Percussion track.</li>
-                    <li>🎸 **Bass**: Low-frequency rhythmic component.</li>
-                    <li>🎶 **Other Instruments**: All remaining non-percussive, non-vocal elements.</li>
-                    <li>➕ *When 6 Stems Mode is selected, more separation options are available (e.g., Piano, Guitar, etc.).*</li>
+                    <li>🎤 <strong>Vocals</strong>: Main singing or speaking voice.</li>
+                    <li>🥁 <strong>Drums</strong>: Percussion track.</li>
+                    <li>🎸 <strong>Bass</strong>: Low-frequency rhythmic component.</li>
+                    <li>🎶 <strong>Other Instruments</strong>: All remaining non-percussive, non-vocal elements.</li>
+                    <li>➕ <em>When 6 Stems Mode is selected, more separation options are available (e.g., Piano, Guitar, etc.).</em></li>
                 </ul>
                 <h4>Stem Selection Control:</h4>
                 <ul>
-                    <li>🎯 **Custom Stem Extraction**: The user can **choose which individual stems they want to extract** (e.g., only Vocals and Drums) to save processing time and keep the project tidy.</li>
+                    <li>🎯 <strong>Custom Stem Extraction</strong>: The user can <strong>choose which individual stems they want to extract</strong> (e.g., only Vocals and Drums) to save processing time and keep the project tidy.</li>
                 </ul>
             </div>
 
@@ -270,9 +319,9 @@
                 <p>Process your audio precisely how you need it, directly on the timeline, with various batch processing and selection modes.</p>
                 <h4>Timeline Processing Options:</h4>
                 <ul>
-                    <li>A. **Selected Events Batch**: Process multiple selected audio events simultaneously.</li>
-                    <li>B. **Timeline Loop Region**: Process only the specific area defined by the Loop Region (Selection Area).</li>
-                    <li>C. **Region Markers**: Use defined Region Markers for segmented batch processing.</li>
+                    <li>A. <strong>Selected Events Batch</strong>: Process multiple selected audio events simultaneously.</li>
+                    <li>B. <strong>Timeline Loop Region</strong>: Process only the specific area defined by the Loop Region (Selection Area).</li>
+                    <li>C. <strong>Region Markers</strong>: Use defined Region Markers for segmented batch processing.</li>
                 </ul>
             </div>
         </div>
@@ -312,11 +361,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-

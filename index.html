@@ -14,7 +14,7 @@
             box-sizing: border-box;
         }
 
-        /* Dark theme base */
+        /* Dark theme base (Same as Auto Sync) */
         body {
             font-family: Arial, sans-serif;
             background-color: #121212;
@@ -28,7 +28,7 @@
             padding: 20px;
         }
 
-        /* Hero Section */
+        /* Hero Section (Same as Auto Sync) */
         #hero {
             background-color: #000;
             color: #fff;
@@ -37,8 +37,8 @@
         }
 
         #hero h1 {
-            font-size: 2.5rem;
             margin: 0;
+            font-size: 2.5rem;
         }
 
         #hero p {
@@ -64,7 +64,7 @@
             color: #fff;
         }
 
-        /* Demo */
+        /* Demo (Same as Auto Sync) */
         #demo {
             text-align: center;
             margin-top: 40px;
@@ -94,9 +94,9 @@
             }
         }
 
-        /* Demucs Features */
+        /* Features (Adapted from #sync-methods to #demucs-stems) */
         #demucs-stems {
-            background-color: #161616;
+            background-color: #161616; /* Same background */
             padding: 50px 0;
             text-align: left;
         }
@@ -106,9 +106,13 @@
             margin-bottom: 40px;
             color: #ffffff;
         }
+        
+        #demucs-stems .demucs-block {
+            margin-bottom: 40px; /* Added spacing between blocks */
+        }
 
         #demucs-stems h3 {
-            color: #1e90ff;
+            color: #1e90ff; /* Same accent color */
             margin-bottom: 10px;
         }
 
@@ -123,8 +127,8 @@
 
         #demucs-stems ul {
             margin-left: 20px;
-            padding-left: 0;
             list-style-type: disc;
+            padding-left: 0;
         }
 
         #demucs-stems li {
@@ -139,68 +143,71 @@
             margin: 30px 0;
         }
 
-        /* Pricing */
-        #pricing {
-            padding: 50px 0;
-            text-align: center;
+
+        /* Purchase + Contact Combined (Adapted from Auto Sync) */
+        #purchase-contact {
             background-color: #181818;
+            padding: 60px 0;
         }
 
-        #pricing h2 {
-            color: #fff;
-            margin-bottom: 30px;
-        }
-
-        .pricing-cards {
+        .side-by-side {
             display: flex;
             justify-content: center;
-            align-items: center; /* Vertical alignment */
+            align-items: flex-start;
+            gap: 50px;
             flex-wrap: wrap;
-            gap: 30px;
         }
 
-        .pricing-cards .card {
-            background-color: #202020;
+        .pricing-box, .contact-box {
+            background-color: #1a1a1a;
             border: 1px solid #2b2b2b;
-            padding: 20px;
             border-radius: 10px;
-            width: 300px;
+            padding: 25px;
+            width: 380px;
+        }
+
+        .pricing-box h2, .contact-box h2 {
             text-align: center;
-            color: #e6e6e6;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-        }
-
-        .pricing-cards .card h3 {
-            margin-bottom: 15px;
-            color: #1e90ff;
-        }
-
-        .pricing-cards .card p {
-            color: #d6d6d6;
-        }
-
-        /* Contact Form */
-        #contact {
-            background-color: #161616;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        #contact h2 {
             color: #fff;
             margin-bottom: 20px;
         }
 
-        #contact form {
+        /* Center card inside pricing box */
+        .pricing-box {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        #contact form input,
-        #contact form textarea {
+        .pricing-box .card {
+            background-color: #202020;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 85%;
+            text-align: center;
+            color: #e6e6e6;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+        }
+
+        .pricing-box .card h3 {
+            color: #1e90ff;
+            margin-bottom: 15px;
+        }
+
+        .pricing-box .card p {
+            color: #d6d6d6;
+            margin-bottom: 12px;
+        }
+        
+        .pricing-box .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Contact Form (Same as Auto Sync) */
+        .contact-box form input,
+        .contact-box form textarea {
             width: 100%;
-            max-width: 500px;
             background-color: #1f1f1f;
             color: #e6e6e6;
             padding: 10px;
@@ -211,13 +218,13 @@
             transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
-        #contact form input:focus,
-        #contact form textarea:focus {
+        .contact-box form input:focus,
+        .contact-box form textarea:focus {
             border-color: #1e90ff;
             box-shadow: 0 0 0 3px rgba(30,144,255,0.08);
         }
 
-        #contact form button {
+        .contact-box form button {
             display: block;
             margin: 10px auto 0 auto;
             background-color: #1e90ff;
@@ -226,13 +233,14 @@
             border: none;
             border-radius: 6px;
             cursor: pointer;
+            transition: background 0.25s ease;
         }
 
-        #contact form button:hover {
+        .contact-box form button:hover {
             background-color: #0b60d1;
         }
 
-        /* Footer */
+        /* Footer (Same as Auto Sync) */
         footer {
             background-color: #000;
             color: #9a9a9a;
@@ -240,22 +248,7 @@
             text-align: center;
         }
 
-        .btn-secondary {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .btn-secondary:hover {
-            background-color: #218838;
-        }
-
-        /* Small utility */
-        a { color: #8cc3ff; }
-        hr { border: 0; border-top: 1px solid #2a2a2a; }
+        /* Removed unused .btn-secondary and small utility styles to match the original document's style block closely */
     </style>
 </head>
 <body>
@@ -277,11 +270,11 @@
     <section id="demo">
         <div class="container">
             <h2>See Demucs for VEGAS Pro in Action</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/PvXUo1SbICs?si=AYhtry8fEeGsTqXG" 
-                title="YouTube video player" frameborder="0" allowfullscreen>
+            <iframe src="https://www.youtube.com/embed/PvXUo1SbICs?si=AYhtry8fEeGsTqXG"
+                frameborder="0" allowfullscreen>
             </iframe>
         </div>
-    </section>   
+    </section>    
 
     <section id="demucs-stems">
         <div class="container">
@@ -298,7 +291,7 @@
                 </ul>
             </div>
             
-            <div class="demucs-block">
+            <hr> <div class="demucs-block">
                 <h3>Quality Modes and Available Stems</h3>
                 <p>Choose the optimal balance between speed and quality, and precisely control which audio parts are extracted for your editing needs.</p>
                 <h4>Processing Modes:</h4>
@@ -321,7 +314,7 @@
                 </ul>
             </div>
 
-            <div class="demucs-block">
+            <hr> <div class="demucs-block">
                 <h3>Flexible Workflow Modes in VEGAS Pro</h3>
                 <p>Process your audio precisely how you need it, directly on the timeline, with various batch processing and selection modes.</p>
                 <h4>Timeline Processing Options:</h4>
@@ -334,30 +327,27 @@
         </div>
     </section>
 
-    <section id="pricing">
-        <div class="container">
-            <h2>Get it Now</h2>
-            <div class="pricing-cards">
+    <section id="purchase-contact"> <div class="container side-by-side">
+            <div class="pricing-box">
+                <h2>Get it Now</h2>
                 <div class="card">
                     <h3>Full Version</h3>
-                    <p><strong>US$ 49</strong> - Lifetime License</p>
+                    <p><strong>US$ 49</strong> - Lifetime license</p>
                     <p>Please send a message to confirm your order. A PayPal invoice will be emailed to you, and your serial number will be sent after payment is confirmed.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form action="https://formspree.io/f/xvgagnja" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="Demucs for Vegas Pro Purchase/Support">
-                <input type="text" name="name" placeholder="Your name" required><br>
-                <input type="email" name="email" placeholder="Your email" required><br>
-                <textarea name="message" placeholder="Write your message here" rows="5"></textarea><br>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
+            <div class="contact-box">
+                <h2>Contact Us</h2>
+                <form action="https://formspree.io/f/xvgagnja" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Demucs for Vegas Pro Purchase/Support">
+                    <input type="text" name="name" placeholder="Your name" required><br>
+                    <input type="email" name="email" placeholder="Your email" required><br>
+                    <textarea name="message" placeholder="Write your message here" rows="5"></textarea><br>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
